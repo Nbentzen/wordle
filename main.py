@@ -85,5 +85,9 @@ class WordleSolver:
         print("Took: ", end-start)
 
 if __name__ == '__main__':
-    kernel = ([16, 4, 2, 4, 8], [1, 1, 1, 1, 1], [0, 0, 0, 0, 0]) #only care about green first letters
+    value_first_and_last = ([16, 4, 2, 4, 8], [1, 1, 1, 1, 1], [0, 0, 0, 0, 0]) #Emphasize green first letters
+    green_yellow_equally = ([1, 1, 1, 1, 1], [1, 1, 1, 1, 1], [0, 0, 0, 0, 0]) #maximize greens and yellows, equally
+    maximize_blacks = ([0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 1, 1, 1, 1]) #hard mode
+
+    kernel = value_first_and_last
     wordle_solver = WordleSolver(kernel)
